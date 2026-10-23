@@ -1,0 +1,12 @@
+# Генератор Dart-клиента из контракта.
+# Источник — contracts/openapi.json (порождается кодом API). Результат коммитится; руками в
+# lib/src/generated/ не лезть: `npm run openapi:emit` → `npm run codegen:dart`.
+swagger_parser:
+  schema_path: ../../contracts/openapi.json
+  output_directory: lib/src/generated
+  language: dart
+  json_serializer: json_serializable
+  root_client: true
+  root_client_name: TheWayApi
+  put_clients_in_folder: false
+  put_in_folder: false

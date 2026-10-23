@@ -1,0 +1,30 @@
+# Dev-контур: только PostgreSQL 18 (API запускается `npm run dev`, на стенде — pm2, SPEC §6).
+# Пароль намеренно тривиален: контур локальный, наружу не смотрит.
+#
+# Имя проекта пинится: иначе Compose берёт его из имени каталога, и каждая копия репозитория
+# подняла бы свою копию контейнера, конфликтующую по порту.
+name: theway
+
+services:
+  postgres:
+    image: postgres:18.6
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      # По умолчанию 5433 — не мешает локальному PostgreSQL на 5432; другой порт — `PGPORT`.
+      - '${PGPORT:-5433}:5432'
+    volumes:
+      # С 18-го мажора — /var/lib/postgresql, а не .../data (docker-library/postgres#1259).
+      - pg-data:/var/lib/postgresql
+      # Базы dev_1…dev_6 — для параллельных прогонов тестов.
+      - ./docker/init-dbs.sql:/docker-entrypoint-initdb.d/init-dbs.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d postgres']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pg-data:

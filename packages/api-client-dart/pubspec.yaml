@@ -1,0 +1,18 @@
+name: api_client
+description: "Сгенерированный Dart-клиент API «Путь» (swagger_parser из contracts/openapi.json). Руками не править."
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  dio: ^5.11.1
+  retrofit: ^4.10.0
+  json_annotation: ^4.12.0
+
+dev_dependencies:
+  swagger_parser: ^1.44.3
+  build_runner: ^2.16.1
+  retrofit_generator: ^10.2.11
+  json_serializable: ^6.14.1

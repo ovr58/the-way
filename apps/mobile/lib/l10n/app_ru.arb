@@ -1,0 +1,1079 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Путь",
+  "commonCancel": "Отмена",
+  "commonPrice": "{price} ₽",
+  "@commonPrice": {
+    "placeholders": {
+      "price": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "shellTabTrips": "Поездки",
+  "shellTabOrders": "Мои заказы",
+  "shellTabChats": "Чаты",
+  "shellTabProfile": "Профиль",
+  "ratingNoReviews": "5, нет отзывов",
+  "ratingTrips": "{count, plural, one{{count} поездка} few{{count} поездки} many{{count} поездок} other{{count} поездки}}",
+  "@ratingTrips": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tripCardStops": "{count, plural, one{{count} остановка} few{{count} остановки} many{{count} остановок} other{{count} остановки}}",
+  "@tripCardStops": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tripCardSeatsFree": "{count, plural, one{{count} место} few{{count} места} many{{count} мест} other{{count} места}}",
+  "@tripCardSeatsFree": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tripCardNoSeats": "Мест нет",
+  "tripCardRegistrationOpen": "Идёт регистрация пассажиров",
+  "tripCardArrival": "Прибытие ~{time}",
+  "tripArrivalNextDay": "Прибытие {dateTime} · {travel}",
+  "@tripArrivalNextDay": {
+    "placeholders": {
+      "dateTime": {
+        "type": "String"
+      },
+      "travel": {
+        "type": "String"
+      }
+    }
+  },
+  "@tripCardArrival": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "tripCardPerPerson": "/чел",
+  "tripCardPets": "С животными",
+  "tripCardLuggage": "С багажом",
+  "tripCardChildSeat": "Дет. кресло",
+  "tripCardParcelSizes": "Посылка {sizes}",
+  "@tripCardParcelSizes": {
+    "placeholders": {
+      "sizes": {
+        "type": "String"
+      }
+    }
+  },
+  "tripCardParcels": "Посылки {sizes} · {taken} из {total}",
+  "@tripCardParcels": {
+    "placeholders": {
+      "sizes": {
+        "type": "String"
+      },
+      "taken": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "tripCardBadgeTop": "Топ",
+  "tripCardBadgeNearest": "Ближайший",
+  "tripCardDistance": "{km} км",
+  "@tripCardDistance": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "systemRetry": "Обновить",
+  "systemOfflineTitle": "Нет интернет-соединения",
+  "systemOfflineBody": "Проверьте, включён ли Wi-Fi или мобильный интернет, и попробуйте снова.",
+  "systemErrorTitle": "Не удалось выполнить действие",
+  "systemErrorBody": "Что-то пошло не так. Проверьте интернет и повторите попытку. Если ошибка останется — зайдите позже.",
+  "systemBlockedTitle": "Ваш аккаунт заблокирован",
+  "systemBlockedBody": "Мы ограничили доступ из-за нарушений условий использования",
+  "systemStubTitle": "Раздел в разработке",
+  "systemStubChat": "Чат появится позже",
+  "authWelcomeTitle": "Добро пожаловать в «Путь»!",
+  "authWelcomeSubtitle": "Находите выгодные поездки и договаривайтесь на своих условиях",
+  "authPhoneLabel": "Номер телефона",
+  "authPhoneHint": "+375 25 777 44 20",
+  "authPhoneComment": "Мы отправим вам СМС с кодом для входа в приложение",
+  "authGetCode": "Получить код",
+  "authConsentPrefix": "Продолжая, я соглашаюсь с ",
+  "authConsentTerms": "условиями использования",
+  "authConsentAnd": " и ",
+  "authConsentPrivacy": "политикой конфиденциальности",
+  "authTermsTitle": "Условия использования",
+  "authTermsBody": "Условия использования приложения «Путь»\nДата последнего обновления: 26.02.2026\n\n1. Введение\n\n1.1. Настоящие условия использования (далее – «Условия») регулируют отношения между владельцем приложения «Путь» (далее – «Компания») и пользователем (далее – «Пользователь») мобильного приложения «Путь» (далее – «Приложение»).\n\n1.2. Используя приложение, Пользователь соглашается с настоящими условиями.\n\n2. Предмет условий\n\n2.1. Приложение предоставляет Пользователю возможность находить попутные поездки, бронировать места и отправлять посылки, а водителю — публиковать поездки и ставить свои цены.\n\n3. Регистрация и доступ к приложению\n\n3.1. Для использования некоторых функций приложения может потребоваться регистрация.\n\n3.2. Пользователь несёт ответственность за конфиденциальность своих учётных данных.\n\n4. Права и обязанности Пользователя\n\n4.1. Пользователь имеет право использовать приложение в соответствии с настоящими условиями.\n\n4.2. Пользователь обязуется не использовать приложение в незаконных целях.\n\n5. Права и обязанности Компании\n\n5.1. Компания имеет право изменять функционал приложения.\n\n5.2. Компания обязуется обеспечивать конфиденциальность данных Пользователя.\n\n6. Ответственность\n\n6.1. Компания не несёт ответственности за убытки, возникшие в результате использования приложения.\n\n7. Интеллектуальная собственность\n\n7.1. Все права на приложение принадлежат Компании.\n\n8. Изменение условий\n\n8.1. Компания имеет право изменять настоящие условия в одностороннем порядке.\n\n9. Применимое право\n\n9.1. К настоящим условиям применяется законодательство Российской Федерации.\n\n10. Контактная информация\n\nКонтакты Компании — в разделе «О приложении» профиля.",
+  "authCodeTitle": "СМС-код",
+  "authCodeHint": "Введите код подтверждения из SMS, отправленного на ",
+  "authLogin": "Вход",
+  "authResendPrompt": "Не получили SMS код?",
+  "authResendTimer": "Выслать код повторно через:",
+  "authResendButton": "Отправить",
+  "authCodeErrorTitle": "Неверный код подтверждения",
+  "authCodeErrorBody": "Код не подходит. Проверьте правильность введённых цифр и срок действия кода. Если код устарел, запросите новый",
+  "authErrorGeneric": "Не удалось выполнить действие. Проверьте интернет и повторите попытку",
+  "onboardingSplashTagline": "Попутчики и посылки по вашему маршруту",
+  "onboardingStart": "Начать",
+  "onboardingHaveAccount": "Уже есть аккаунт",
+  "onboardingWelcomeTitle": "Добро пожаловать\nв ",
+  "onboardingSlide1Text": "Находите нужное направление, создавайте поездки\nили бронируйте места,\nэкономьте время и деньги",
+  "onboardingSlide2Text": "Зарегистрируйтесь,\nчтобы начать\nпользоваться\nприложением.",
+  "onboardingContinue": "Продолжить",
+  "onboardingRoleQuestion": "От чьего лица вы хотите\nсоздать поездку?",
+  "onboardingRoleDriver": "Водитель",
+  "onboardingRolePassenger": "Пассажир",
+  "cityTitle": "Выберите ваш город",
+  "cityHint": "Поездки доступны в выбранном городе и его окрестностях",
+  "citySearch": "Поиск города...",
+  "cityNotInList": "Моего города нет в списке",
+  "cityContinue": "Продолжить",
+  "cityNext": "Далее",
+  "profileSetupTitle": "Создайте свой профиль",
+  "profileSetupHint": "Создайте профиль и найдите подходящую поездку",
+  "profileSetupName": "Имя",
+  "profileSetupNext": "Далее",
+  "profileSetupPhotoTitle": "Загрузка фотографии",
+  "profileSetupCamera": "Камера",
+  "profileSetupGallery": "Галерея",
+  "profileSetupErrorFileTooLarge": "Файл слишком большой. Выберите фото до 10 МБ",
+  "profileSetupErrorFileType": "Подходят только фото JPEG, PNG или WebP",
+  "profileSetupErrorGeneric": "Не удалось выполнить действие. Проверьте интернет и повторите попытку",
+  "photoCameraDenied": "Нет доступа к камере — разрешите в настройках телефона",
+  "profileTitle": "Мой профиль",
+  "profileSwitchToDriver": "Перейти в режим водителя",
+  "profileSwitchToPassenger": "Перейти в режим пассажира",
+  "profilePersonalData": "Личные данные",
+  "profilePersonalDataHint": "Имя, фото",
+  "profileVehicles": "Транспортные средства",
+  "profileVehiclesHint": "Информация о ТС пользователя",
+  "profileSavedRoutes": "Сохраненные маршруты",
+  "profileSavedRoutesHint": "Избранные адреса и поездки",
+  "profileOrderHistory": "История заказов",
+  "profileOrderHistoryHint": "Прошлые поездки и детали",
+  "profileComplaints": "Жалобы",
+  "profileComplaintsHint": "Список жалоб",
+  "profileNotifications": "Уведомления",
+  "profileNotificationsHint": "Push-уведомления",
+  "profilePayment": "Способ оплаты",
+  "profilePaymentHint": "Карты и способы оплаты",
+  "profileFaq": "Частые вопросы",
+  "profileAbout": "О приложении",
+  "profileAboutHint": "Версия, информация",
+  "profileLogout": "Выйти из аккаунта",
+  "profileLogoutTitle": "Выйдите из аккаунта?",
+  "profileLogoutConfirm": "Выйти",
+  "profileRoleTitle": "Выберите роль",
+  "profileRoleDriver": "Водитель",
+  "profileRolePassenger": "Пассажир",
+  "profileErrorGeneric": "Не удалось выполнить действие. Проверьте интернет и повторите попытку",
+  "profilePhoneLabel": "Номер телефона",
+  "profileSave": "Сохранить",
+  "profileSaved": "Изменения сохранены",
+  "profileComplaintOpen": "Открыта",
+  "profileComplaintClosed": "Закрыта",
+  "profileComplaintsEmptyTitle": "Жалоб нет",
+  "profileComplaintsEmptyBody": "Здесь появятся жалобы на вас, если они будут",
+  "searchTitle": "Поездки",
+  "searchTabCars": "Автомобили",
+  "searchTabBuses": "Автобусы",
+  "searchEmptyTitle": "Здесь ещё нет заказов",
+  "searchEmptySubtitle": "Станьте первым — создайте поездку или проверьте чуть позже",
+  "searchGeoTitle": "Доступ к геолокации",
+  "searchGeoBody": "Разрешите доступ к геолокации — так будет проще найти подходящий вариант",
+  "searchGeoAllow": "Разрешить",
+  "searchGeoSkip": "Пропустить",
+  "searchFilterTitle": "Фильтры",
+  "searchFilterClear": "Очистить",
+  "searchFilterApply": "Применить",
+  "searchFilterRoute": "Маршрут",
+  "searchFilterFrom": "Откуда",
+  "searchFilterTo": "Куда",
+  "searchFilterNear": "Поблизости (30 км)",
+  "searchFilterNearUnavailable": "Для поиска поблизости нужен доступ к геолокации",
+  "searchFilterKindTrips": "Поездки",
+  "searchFilterKindParcels": "Посылки",
+  "searchCityPlaceholder": "Введите название города",
+  "searchCityNothing": "Ничего не найдено",
+  "searchCityLine": "{name}, {region}",
+  "@searchCityLine": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "region": {
+        "type": "String"
+      }
+    }
+  },
+  "driverOrdersTabTrips": "Поездки",
+  "driverOrdersTabOrders": "Заказы пассажиров",
+  "driverOrdersEmptyTitle": "Заказов пассажиров пока нет",
+  "driverOrdersEmptySubtitle": "Проверьте чуть позже",
+  "driverOrdersSeats": "{count, plural, one{{count} место} few{{count} места} many{{count} мест} other{{count} места}}",
+  "@driverOrdersSeats": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "driverOrdersParcel": "Посылка {size}",
+  "@driverOrdersParcel": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "driverOrdersSheetTitle": "Откликнуться на заказ",
+  "driverOrdersStops": "Промежуточные остановки",
+  "driverOrdersMyTrips": "Ваши поездки в этот день",
+  "driverOrdersNoTrips": "Подходящих поездок в этот день нет",
+  "driverOrdersTripLine": "Поездка №{number} · {time}",
+  "@driverOrdersTripLine": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "driverOrdersTripSeats": "{count, plural, one{Свободно {count} место} few{Свободно {count} места} many{Свободно {count} мест} other{Свободно {count} места}}",
+  "@driverOrdersTripSeats": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "driverOrdersTotal": "Итого {price} ₽",
+  "@driverOrdersTotal": {
+    "placeholders": {
+      "price": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "driverOrdersRespond": "Откликнуться",
+  "driverOrdersCreateTrip": "Создать поездку",
+  "driverOrdersResponded": "Отклик отправлен. Пассажир получит предложение",
+  "driverOrdersErrorUnavailable": "Заказ уже взят другим водителем или отменён",
+  "driverOrdersErrorMismatch": "Поездка не подходит под заказ",
+  "driverOrdersErrorGeneric": "Не удалось выполнить действие. Попробуйте ещё раз",
+  "tripDetailsTitle": "Поездка",
+  "tripDetailsRoute": "Маршрут",
+  "tripDetailsDateTime": "Дата и время",
+  "tripDetailsSeatsFree": "Мест свободно",
+  "tripDetailsSeatsOf": "{free} из {total}",
+  "@tripDetailsSeatsOf": {
+    "placeholders": {
+      "free": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "tripDetailsDriver": "Водитель",
+  "tripDetailsPrice": "Стоимость поездки",
+  "tripDetailsBetweenStops": "Между остановками",
+  "tripDetailsShowPrices": "Смотреть стоимость",
+  "tripDetailsBook": "Забронировать место",
+  "tripDetailsNoSeats": "Мест нет",
+  "tripDetailsSendParcel": "Отправить посылку",
+  "tripDetailsWrite": "Написать водителю",
+  "tripDetailsRequestSent": "Заявка отправлена",
+  "bookingTitle": "Бронирование места",
+  "bookingRoute": "Маршрут",
+  "bookingPickup": "Точка отправления",
+  "bookingDropoff": "Конечная точка",
+  "bookingAddressPlaceholder": "Введите адрес",
+  "bookingNearestStop": "Ближайшая ко мне",
+  "bookingNothing": "Ничего не найдено",
+  "bookingExtras": "Доп. услуги",
+  "bookingExtraChildSeat": "Детское кресло",
+  "bookingExtraChildSeatHint": "Детское кресло",
+  "bookingExtraLuggage": "Багаж",
+  "bookingExtraLuggageHint": "Большой чемодан",
+  "bookingExtraPets": "Животные",
+  "bookingExtraPetsHint": "В переноске или на коленях",
+  "bookingExtraPrice": "+{price} ₽",
+  "@bookingExtraPrice": {
+    "placeholders": {
+      "price": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "bookingPassengers": "Пассажиров",
+  "bookingParcel": "Посылка",
+  "bookingParcelHint": "Груз различного веса",
+  "bookingParcelUpTo": "до {price} ₽",
+  "@bookingParcelUpTo": {
+    "placeholders": {
+      "price": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "bookingParcelSizePrompt": "Укажите размер вашей посылки",
+  "bookingSizeS": "Маленькая",
+  "bookingSizeSHint": "Конверты, ключи...",
+  "bookingSizeM": "Средняя",
+  "bookingSizeMHint": "до 50/40/30 до 10 кг",
+  "bookingSizeL": "Большая",
+  "bookingSizeLHint": "до 80/60/50 до 30 кг",
+  "bookingAdd": "Добавить",
+  "bookingComment": "Комментарий",
+  "bookingCommentHint": "Вид посылки",
+  "bookingParcelOnly": "Без проезда пассажира",
+  "bookingParcelOnlyHint": "Можно отправить только посылку, без места в авто",
+  "bookingTotal": "Итого",
+  "bookingSubmit": "Отправить заявку",
+  "bookingPay": "Перейти к оплате",
+  "bookingErrNoSeats": "Мест нет",
+  "bookingErrUnavailable": "Поездка недоступна для бронирования",
+  "bookingErrExists": "У вас уже есть бронь на эту поездку",
+  "bookingErrGeneric": "Не удалось выполнить действие. Попробуйте ещё раз",
+  "bookingPaidTitle": "Место забронировано",
+  "bookingPaidBody": "Вы успешно забронировали место в поездке. Детали маршрута и данные водителя доступны в разделе «Мои заказы».",
+  "bookingPaidTrips": "Мои заказы",
+  "answersAcceptedTitle": "Водитель принял заявку",
+  "answersAcceptedBody": "Водитель подтвердил вашу заявку на поездку. Для завершения бронирования оплатите поездку.",
+  "answersDeclinedTitle": "Водитель отклонил заявку",
+  "answersDeclinedBody": "К сожалению, водитель отклонил вашу заявку на поездку. Вы можете выбрать другую поездку или создать собственную.",
+  "answersOk": "Ок",
+  "cancelButton": "Отменить бронь",
+  "cancelRequestTitle": "Отменить заявку?",
+  "cancelRequestBody": "Водитель ещё не ответил на заявку. Отмена не повлияет на ваш аккаунт.",
+  "cancelRequestBack": "Вернуться",
+  "cancelRequestConfirm": "Отменить заявку",
+  "cancelTitle": "Отменить бронирование?",
+  "cancelAcceptedBody": "Водитель уже подтвердил вашу заявку. Вы уверены, что хотите отказаться от поездки?",
+  "cancelDeclineRequest": "Отказаться от заявки",
+  "cancelWarning": "Две отмены в течение 30 дней приведут к автоматической блокировке аккаунта на 30 дней.",
+  "cancelCountLabel": "Отмен за 30 дней",
+  "cancelCountValue": "{count} / 2",
+  "@cancelCountValue": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "cancelRefundLabel": "Возврат на карту",
+  "cancelRefundAmount": "{amount} ₽",
+  "@cancelRefundAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "cancelRefundTermLabel": "Срок зачисления",
+  "cancelRefundTerm": "до 3 дней",
+  "cancelKeep": "Не отменять",
+  "cancelConfirm": "Да, отменить",
+  "cancelConfirmRefund": "Да, отменить и вернуть деньги",
+  "cancelSecondTitle": "Это может повлиять на ваш аккаунт",
+  "cancelSecondBody": "Вы уже отменили одну поездку за последние 30 дней. Бронирование новых поездок будет недоступно в течение 30 дней.",
+  "cancelSecondNotice": "У вас уже была одна отмена за последние 30 дней",
+  "cancelSecondConfirm": "Всё равно отменить",
+  "cancelDone": "Бронь отменена",
+  "cancelDoneRefund": "Заявка на возврат {amount} ₽ отправлена администратору. Деньги вернутся на ту же карту в течение {days} дней.",
+  "@cancelDoneRefund": {
+    "placeholders": {
+      "amount": {
+        "type": "int",
+        "format": "decimalPattern"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "cancelHome": "На главную",
+  "cancelBlockedTitle": "Аккаунт временно заблокирован",
+  "cancelBlockedBodyPassenger": "Вы отменили две поездки за последние 30 дней. Бронирование новых поездок временно недоступно",
+  "cancelBlockedBodyDriver": "Вы отменили две поездки за последние 30 дней. Публикация новых поездок временно недоступна",
+  "cancelBlockedNotice": "Информация о блокировке передана администратору приложения",
+  "cancelBlockedOk": "Понятно",
+  "cancelErrChanged": "Статус брони уже изменился",
+  "tripNewTitle": "Новый заказ",
+  "tripNewStep": "Шаг {n} из 6",
+  "@tripNewStep": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "tripNewNext": "Далее",
+  "tripNewTypeTitle": "Тип заказа",
+  "tripNewTypeRide": "Автомобиль",
+  "tripNewTypeRideHint": "Найти водителя для себя",
+  "tripNewTypeParcel": "Посылка",
+  "tripNewTypeParcelHint": "Отправить груз или посылку",
+  "tripNewTypeRideDriverHint": "Везу пассажиров",
+  "tripNewTypeRideDriver": "Пассажиры",
+  "tripNewTypeParcelDriverHint": "Везу только посылки",
+  "tripNewRouteTitle": "Маршрут",
+  "tripNewFrom": "Откуда",
+  "tripNewTo": "Куда",
+  "tripNewBoardingPoint": "Точка посадки",
+  "tripNewDestinationPoint": "Пункт назначения",
+  "tripNewStopPoint": "Остановка",
+  "tripNewAddStop": "Добавить остановку",
+  "tripNewSavedRoutes": "Мои сохранённые маршруты",
+  "tripNewPickCity": "Выбрать город из списка",
+  "tripNewCityPickerTitle": "Выбрать город",
+  "tripNewCitySearch": "Поиск города",
+  "tripNewCityEmpty": "Ничего не найдено",
+  "tripNewLoadError": "Не удалось загрузить данные",
+  "tripNewDeparture": "Дата и время выезда",
+  "tripNewDate": "Дата",
+  "tripNewTime": "Время",
+  "tripNewArrival": "Примерное время прибытия",
+  "tripNewPassengers": "Пассажиры",
+  "tripNewSeatsCount": "Количество мест:",
+  "tripNewPickDate": "Выбрать дату",
+  "tripNewPickTime": "Выбрать время",
+  "tripNewPriceTitle": "Стоимость",
+  "tripNewPriceTrip": "Стоимость поездки",
+  "tripNewPriceTotal": "Общая стоимость",
+  "tripNewPriceWhole": "Весь маршрут",
+  "tripNewPriceBetween": "Между остановками",
+  "tripNewPriceBoarding": "Стоимость посадки",
+  "tripNewPriceHint": "Цена",
+  "tripNewPriceEditTitle": "Изменение стоимости",
+  "tripNewPriceFullBelowLeg": "Весь маршрут не может стоить меньше участка {from} → {to} ({price} ₽): пассажир всего маршрута тоже едет через эту точку",
+  "@tripNewPriceFullBelowLeg": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "tripNewPriceFullAboveSum": "Весь маршрут не может стоить больше суммы участков ({sum} ₽)",
+  "@tripNewPriceFullAboveSum": {
+    "placeholders": {
+      "sum": {
+        "type": "String"
+      }
+    }
+  },
+  "tripNewPriceBelowBoarding": "Не меньше стоимости посадки ({price} ₽)",
+  "@tripNewPriceBelowBoarding": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "tripNewPriceTooHigh": "Не больше 100 000 ₽",
+  "tripNewPriceBoardingEmpty": "Укажите стоимость посадки (можно 0)",
+  "tripNewSave": "Сохранить",
+  "tripNewCar": "Автомобиль",
+  "tripNewAddCar": "Добавить авто",
+  "tripNewNoCarsTitle": "Нет добавленных авто",
+  "tripNewNoCarsBody": "Чтобы создать поездку, добавьте автомобиль и пришлите СТС на проверку администратору",
+  "tripNewCarSeats": "{count, plural, one{{count} место} few{{count} места} many{{count} мест} other{{count} места}}",
+  "@tripNewCarSeats": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tripNewCarTooSmall": "Мест в авто меньше, чем в поездке",
+  "tripNewExtrasTitle": "Дополнительные услуги",
+  "tripNewExtraChildSeat": "Детское кресло",
+  "tripNewExtraLuggage": "Багаж",
+  "tripNewExtraPets": "Животные",
+  "tripNewExtraPetsHint": "В переноске или на коленях",
+  "tripNewExtraParcel": "Посылка",
+  "tripNewExtraParcelHint": "Груз различного веса",
+  "tripNewExtraUpTo": "до {price} ₽",
+  "@tripNewExtraUpTo": {
+    "placeholders": {
+      "price": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "tripNewExtraPrice": "{price} ₽",
+  "@tripNewExtraPrice": {
+    "description": "Цена посылки единственного размера («Новый заказ - Выбор доп услуг»): как в кадре, без пробела.",
+    "placeholders": {
+      "price": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "tripNewParcelSheetTitle": "Укажите размер вашей посылки",
+  "tripNewParcelS": "Маленькая",
+  "tripNewParcelSHint": "Конверты, ключи...",
+  "tripNewParcelM": "Средняя",
+  "tripNewParcelMHint": "до 50/40/30 до 10 кг",
+  "tripNewParcelL": "Большая",
+  "tripNewParcelLHint": "до 80/60/50 до 30 кг",
+  "tripNewParcelOnly": "Без проезда пассажира",
+  "tripNewParcelOnlyDriverHint": "Возьму посылку без пассажира",
+  "tripNewParcelDriverTitle": "Какие посылки возьмёте",
+  "tripNewParcelSeats": "Мест для посылок",
+  "tripNewParcelAdd": "Добавить",
+  "tripNewModeTitle": "Тип бронирования",
+  "tripNewModeStandard": "Стандартное",
+  "tripNewModeStandardHint": "Вы рассматриваете каждую заявку отдельно",
+  "tripNewModeStandard1": "Вы получаете уведомление о заявке",
+  "tripNewModeStandard2": "Можете перейти в профиль пассажира",
+  "tripNewModeStandard3": "Подтверждаете или отклоняете бронь",
+  "tripNewModeStandard4": "После подтверждения пассажир оплачивает",
+  "tripNewModeInstant": "Быстрое бронирование",
+  "tripNewModeInstantHint": "Без подтверждения каждой заявки",
+  "tripNewModeInstant1": "Пассажир сразу оплачивает место",
+  "tripNewModeInstant2": "Подтверждение не требуется",
+  "tripNewModeInstant3": "Подходит для постоянных маршрутов",
+  "tripNewPublish": "Опубликовать поездку",
+  "tripNewSaveTemplate": "Сохранить шаблон",
+  "tripNewTemplateSaved": "Шаблон сохранён",
+  "tripNewTemplateFailed": "Не удалось сохранить шаблон",
+  "tripNewPublishTitle": "Опубликовать поездку?",
+  "tripNewPublishBody": "После публикации пассажиры смогут увидеть и забронировать места. Изменить поездку можно будет до того, как присоединится первый пассажир.",
+  "tripNewPublishYes": "Да, опубликовать",
+  "tripNewSumFrom": "Точка посадки",
+  "tripNewSumTo": "Пункт назначения",
+  "tripNewSumStops": "Доп. остановки",
+  "tripNewSumDateTime": "Дата и время",
+  "tripNewSumPrice": "Стоимость поездки",
+  "tripNewSumBetween": "Между остановками",
+  "tripNewSumShowPrices": "Смотреть стоимость",
+  "tripNewSumExtrasPrice": "Цена доп. услуг",
+  "tripNewSumCar": "Автомобиль",
+  "tripNewSumExtras": "Доп услуги",
+  "tripNewSumParcels": "Посылки",
+  "tripNewSumParcelsValue": "{sizes} · мест для посылок {count}",
+  "@tripNewSumParcelsValue": {
+    "placeholders": {
+      "sizes": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tripNewSumMode": "Тип бронирования",
+  "tripNewSumArrival": "Прибытие",
+  "tripNewSumArrivalValue": "{dateTime} · {travel}",
+  "@tripNewSumArrivalValue": {
+    "placeholders": {
+      "dateTime": {
+        "type": "String"
+      },
+      "travel": {
+        "type": "String"
+      }
+    }
+  },
+  "tripNewSumSeats": "Мест для пассажиров",
+  "tripNewArrivalNextDay": "Прибытие {date} (на следующий день)",
+  "@tripNewArrivalNextDay": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "tripTravelHours": "в пути {hours} ч",
+  "@tripTravelHours": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "tripTravelHoursMinutes": "в пути {hours} ч {minutes} мин",
+  "@tripTravelHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "tripTravelMinutes": "в пути {minutes} мин",
+  "@tripTravelMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "tripNewErrorTooFar": "Поездку можно опубликовать не дальше чем на 3 дня вперёд",
+  "tripNewErrorTimeStep": "Время выезда должно быть кратно 30 минутам",
+  "tripNewErrorValidation": "Проверьте данные поездки",
+  "tripNewErrorCar": "Выберите другой автомобиль",
+  "tripNewErrorGeneric": "Не удалось выполнить действие. Попробуйте ещё раз",
+  "tripNewErrorEditLocked": "Редактирование недоступно: к поездке уже присоединился пассажир",
+  "tripNewErrorSeatsBelowTaken": "Мест не может быть меньше, чем уже занято",
+  "tripNewLimitTitle": "Достигнут лимит на сегодня",
+  "tripNewLimitBody": "Можно опубликовать не более 1 поездки в сутки в каждом направлении и не более 10 в неделю. Сегодня у вас уже {count, plural, one{{count} публикация} few{{count} публикации} many{{count} публикаций} other{{count} публикации}}.",
+  "@tripNewLimitBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tripNewLimitSaveTemplate": "Сохранить как шаблон",
+  "tripNewLimitWeekTitle": "Достигнут лимит на неделю",
+  "tripNewLimitWeekBody": "Следующая публикация — с понедельника",
+  "tripNewLimitToday": "Сегодня",
+  "tripNewLimitWeek": "На неделе",
+  "tripNewLimitThere": "Туда",
+  "tripNewLimitBack": "Обратно",
+  "tripNewLimitUsed": "{used}/{max}",
+  "@tripNewLimitUsed": {
+    "placeholders": {
+      "used": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "tripNewCreatedTitle": "Заказ опубликован!",
+  "tripNewCreatedBody": "Пассажиры уже видят ваш заказ. Ждём отклик!",
+  "tripNewCreatedLimits": "Лимит публикаций",
+  "tripNewCreatedReverse": "Добавить обратный маршрут",
+  "tripNewCreatedOrders": "Смотреть мои заказы",
+  "tripNewCreatedOrdersShort": "Мои заказы",
+  "tripNewReturnTitle": "Обратное направление",
+  "tripNewEditTitle": "Изменение заказа",
+  "tripNewEditPrice": "Изменить стоимость",
+  "tripNewEditSaved": "Изменения сохранены",
+  "passengerTripsTitle": "Мои заказы",
+  "passengerTripsFilterAll": "Все",
+  "passengerTripsFilterCreated": "Созданные",
+  "passengerTripsFilterActive": "Активные",
+  "passengerTripsFilterCompleted": "Завершенные",
+  "passengerTripsEmptyTitle": "У вас пока нет заказов",
+  "passengerTripsEmptyBody": "Создайте заказ — водители смогут откликнуться",
+  "passengerTripsEmptyCompleted": "Завершённых поездок пока нет",
+  "passengerTripsCreate": "Создать заказ",
+  "passengerTripsOrder": "Заказ №{number}",
+  "@passengerTripsOrder": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "passengerTripsStatusRequested": "Ожидает подтверждения",
+  "passengerTripsStatusPaid": "Место забронировано",
+  "passengerTripsStatusParcelPaid": "Посылка забронирована",
+  "passengerTripsStatusCompleted": "Завершен",
+  "passengerTripsStatusRejected": "Отклонена",
+  "passengerTripsStatusCancelled": "Отменён",
+  "passengerTripsDriverFound": "Найден водитель",
+  "passengerTripsSeats": "{count, plural, one{{count} место} few{{count} места} many{{count} мест} other{{count} места}}",
+  "@passengerTripsSeats": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "passengerTripsParcel": "Посылка {size}",
+  "@passengerTripsParcel": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "passengerTripsRange": "{date}, {from}–{to}",
+  "@passengerTripsRange": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "passengerTripsDetailsTitle": "Поездка",
+  "passengerTripsRouteTitle": "Маршрут",
+  "passengerTripsDepartureLabel": "Дата и время",
+  "passengerTripsSeatsLabel": "Мест свободно",
+  "passengerTripsSeatsOf": "{taken} из {total}",
+  "@passengerTripsSeatsOf": {
+    "placeholders": {
+      "taken": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "passengerTripsWithParcel": "С посылкой",
+  "passengerTripsDriverTitle": "Водитель",
+  "passengerTripsPhoneLabel": "Номер телефона",
+  "passengerTripsTripPrice": "Стоимость поездки",
+  "passengerTripsBetweenStops": "Между остановками",
+  "passengerTripsParcelPrice": "Стоимость перевозки посылки",
+  "passengerTripsYourBooking": "Ваша бронь: {details}",
+  "@passengerTripsYourBooking": {
+    "placeholders": {
+      "details": {
+        "type": "String"
+      }
+    }
+  },
+  "passengerTripsYourParcel": "посылка {size}",
+  "@passengerTripsYourParcel": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "passengerTripsYourLuggage": "багаж",
+  "passengerTripsYourPets": "животное",
+  "passengerTripsYourChildSeat": "детское кресло",
+  "passengerTripsPay": "Оплатить",
+  "passengerTripsMessageDriver": "Написать водителю",
+  "passengerTripsPayFailed": "Не удалось оплатить бронь. Попробуйте ещё раз",
+  "passengerTripsErrorInvalidTransition": "Статус брони уже изменился. Обновите экран",
+  "passengerTripsErrorTripUnavailable": "Поездка больше недоступна",
+  "passengerTripsErrorNotFound": "Бронь не найдена",
+  "passengerTripsErrorForbidden": "Это действие вам недоступно",
+  "orderStep": "Шаг {n} из 3",
+  "@orderStep": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "orderPublish": "Опубликовать заказ",
+  "orderPublishTitle": "Опубликовать заказ?",
+  "orderPublishBody": "После публикации водители увидят заказ и смогут откликнуться",
+  "orderSumSeats": "Количество мест",
+  "orderSumParcel": "Посылка",
+  "orderCreatedBody": "Водители уже видят ваш заказ. Ждём отклик!",
+  "orderErrorTooFar": "Заказ можно опубликовать не дальше чем на 3 дня вперёд",
+  "orderErrorValidation": "Проверьте данные заказа",
+  "orderRespondPublishBody": "Пассажир заказа сразу получит предложение и сможет оплатить. После этого изменить поездку будет нельзя.",
+  "orderRespondCreatedBody": "Отклик отправлен. Пассажир получит предложение",
+  "orderErrorMismatch": "Поездка не подходит под заказ: проверьте дату, маршрут, места и услуги",
+  "orderErrorChanged": "Статус заказа уже изменился. Обновите экран",
+  "orderStatusOpen": "Ищем водителя",
+  "orderStatusExpired": "Водитель не найден",
+  "orderDetailsTitle": "Заказ",
+  "orderSeatsLabel": "Количество мест",
+  "orderParcelLabel": "Посылка",
+  "orderCancel": "Отменить заказ",
+  "orderCancelTitle": "Отменить заказ?",
+  "orderCancelBody": "Водители больше не увидят заказ. Отмена не повлияет на ваш аккаунт.",
+  "orderCancelled": "Заказ отменён",
+  "orderDeclineBody": "Водитель откликнулся на ваш заказ. Отказ не повлияет на ваш аккаунт, заказ снова увидят другие водители.",
+  "driverTripsTitle": "Мои заказы",
+  "driverTripsTabActive": "Активные",
+  "driverTripsTabCompleted": "Завершенные",
+  "driverTripsEmptyTitle": "У вас пока нет поездок",
+  "driverTripsEmptyBody": "Создайте поездку, чтобы пассажиры могли найти ваш маршрут",
+  "driverTripsCreate": "Создать заказ",
+  "driverTripsOrder": "Заказ №{number}",
+  "@driverTripsOrder": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "driverTripsCompleted": "Завершен",
+  "driverTripsResponses": "{count, plural, one{{count} отклик} few{{count} отклика} many{{count} откликов} other{{count} отклика}}",
+  "@driverTripsResponses": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "driverTripsSeatsOf": "{taken} из {total}",
+  "@driverTripsSeatsOf": {
+    "placeholders": {
+      "taken": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "driverTripsRange": "{date}, {from}–{to}",
+  "@driverTripsRange": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "driverTripsDetailsTitle": "Поездка",
+  "driverTripsRouteTitle": "Маршрут",
+  "driverTripsPaidLabel": "Стоимость",
+  "driverTripsDepartureLabel": "Дата и время",
+  "driverTripsSeatsLabel": "Мест для пассажиров",
+  "driverTripsWithParcel": "С посылкой",
+  "driverTripsPassengersTitle": "Пассажиры",
+  "driverTripsDriverTitle": "Водитель",
+  "driverTripsTripPrice": "Стоимость поездки",
+  "driverTripsBetweenStops": "Между остановками",
+  "driverTripsShowPrices": "Смотреть стоимость",
+  "driverTripsSaved": "Изменения сохранены",
+  "driverTripsMenuSeats": "Изменить количество мест",
+  "driverTripsMenuEdit": "Редактировать",
+  "driverTripsMenuClose": "Завершить приём пассажиров",
+  "driverTripsSeatsTitle": "Количество мест",
+  "driverTripsSeatsStepper": "Количество мест:",
+  "driverTripsSeatsSave": "Сохранить",
+  "driverTripsSeatsBelowTaken": "Меньше занятого нельзя",
+  "driverTripsEditLockedTitle": "Редактирование недоступно",
+  "driverTripsEditLockedBody": "К поездке уже присоединились пассажиры. Маршрут, время и стоимость изменить нельзя",
+  "driverTripsEditLockedOk": "Понятно",
+  "driverTripsCancelAction": "Отменить поездку",
+  "driverTripsCancelTitle": "Отменить поездку?",
+  "driverTripsCancelBodyPassengers": "Отмена повлияет на аккаунт: отмен за 30 дней — {count}",
+  "@driverTripsCancelBodyPassengers": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "driverTripsCancelBodyPlain": "Поездка будет отменена",
+  "driverTripsCancelKeep": "Не отменять",
+  "driverTripsActionFailed": "Не удалось выполнить действие. Попробуйте ещё раз",
+  "driverTripsErrorInvalidTransition": "Статус поездки уже изменился. Обновите экран",
+  "driverTripsErrorNotFound": "Поездка не найдена",
+  "driverTripsErrorForbidden": "Это действие вам недоступно",
+  "driverTripsOrderTrip": "Поездка",
+  "driverTripsOrderTripParcel": "Поездка + посылка {size}",
+  "@driverTripsOrderTripParcel": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "driverTripsOrderParcel": "Посылка {size}",
+  "@driverTripsOrderParcel": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "driverBookingsTripTitle": "Поездка",
+  "driverBookingsCost": "Стоимость",
+  "driverBookingsRoute": "Маршрут",
+  "driverBookingsTripRoute": "Маршрут поездки",
+  "driverBookingsPassengerRoute": "Маршрут пассажира",
+  "driverBookingsPickup": "Точка посадки",
+  "driverBookingsDropoff": "Точка высадки",
+  "driverBookingsParcelComment": "Комментарий — Вид посылки",
+  "driverBookingsDateTime": "Дата и время",
+  "driverBookingsPassengerSeats": "Мест для пассажиров",
+  "driverBookingsSeatsOf": "{taken} из {total}",
+  "@driverBookingsSeatsOf": {
+    "placeholders": {
+      "taken": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "driverBookingsWithParcel": "С посылкой",
+  "driverBookingsPassengers": "Пассажиры",
+  "driverBookingsNoRequests": "Заявок пока нет",
+  "driverBookingsStatusRequested": "Не подтверждён",
+  "driverBookingsStatusAwaitingPayment": "Ожидает оплаты",
+  "driverBookingsStatusPaid": "Подтверждён",
+  "driverBookingsSeats": "{count, plural, one{{count} место} few{{count} места} many{{count} мест} other{{count} места}}",
+  "@driverBookingsSeats": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "driverBookingsParcelSize": "Посылка {size}",
+  "@driverBookingsParcelSize": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "driverBookingsDriver": "Водитель",
+  "driverBookingsTripPrice": "Стоимость поездки",
+  "driverBookingsBetweenStops": "Между остановками",
+  "driverBookingsShowPrices": "Смотреть стоимость",
+  "driverBookingsConfirm": "Подтвердить бронь",
+  "driverBookingsReject": "Отклонить бронь",
+  "driverBookingsConfirmed": "Бронь подтверждена",
+  "driverBookingsRejected": "Бронь отклонена",
+  "driverBookingsErrorInvalidTransition": "Состояние брони уже изменилось. Обновите список.",
+  "driverBookingsErrorNoSeats": "Свободных мест не осталось.",
+  "driverBookingsErrorGeneric": "Не удалось выполнить действие. Повторите попытку.",
+  "driverBookingsProfileTitle": "Профиль пассажира",
+  "driverProfileTitle": "Профиль водителя",
+  "driverProfileReviews": "Отзывы",
+  "driverProfileNoReviews": "Отзывов пока нет",
+  "driverProfileAuthorUnknown": "Пассажир",
+  "driverBookingsPhone": "Номер телефона",
+  "driverBookingsTripsRating": "Рейтинг поездок",
+  "driverBookingsWrite": "Написать",
+  "driverBookingsWriteChat": "Написать в чат",
+  "driverBookingsNewResponseTitle": "Новый отклик",
+  "driverBookingsNewResponseBody": "Пассажир хочет присоединиться к вашей поездке. Ожидается ваше решение.",
+  "driverBookingsNewResponseAction": "Перейти к отклику",
+  "driverBookingsPassengerPaidTitle": "Пассажир оплатил поездку",
+  "driverBookingsPassengerPaidBody": "Пассажир успешно оплатил поездку. Место в вашей поездке забронировано.",
+  "driverBookingsPassengerPaidAction": "Перейти к поездке",
+  "carsTitle": "Транспортные средства",
+  "carsEmptyTitle": "У вас еще нет транспортного средства",
+  "carsEmptyBody": "Добавьте информацию о ТС и берите или создавайте заказы",
+  "carsAdd": "Добавить ТС",
+  "carsSeats": "{count, plural, one{{count} место} few{{count} места} many{{count} мест} other{{count} места}}",
+  "@carsSeats": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "carsKindCar": "Легковой",
+  "carsKindBus": "Автобус",
+  "carsKindSeats": "{kind} · {seats}",
+  "@carsKindSeats": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "seats": {
+        "type": "String"
+      }
+    }
+  },
+  "carsStatusVerified": "Проверен",
+  "carsStatusPending": "На проверке",
+  "carsStatusRejected": "Отклонён",
+  "carsDocuments": "Документы",
+  "carsSts": "СТС (свидетельство о регистрации)",
+  "carsDelete": "Удалить ТС",
+  "carsDeleteTitle": "Удалить транспортное средство?",
+  "carsDeleteConfirm": "Удалить",
+  "carsErrorGeneric": "Не удалось выполнить действие. Повторите попытку.",
+  "carsAddTitle": "Добавление нового ТС",
+  "carsInfoTitle": "Информация об автомобиле",
+  "carsBrand": "Марка",
+  "carsModel": "Модель",
+  "carsPlate": "Госномер",
+  "carsPlateHint": "А 000 АА 00",
+  "carsPlateTaken": "Авто с таким госномером уже есть в вашем списке",
+  "carsCapacity": "Вместимость",
+  "carsCapacityUnit": "мест",
+  "carsSeatsRange": "У легкового — от 1 до 8 мест",
+  "carsSeatsRangeBus": "У автобуса — от 9 до 60 мест",
+  "carsAddPhoto": "Добавить фото",
+  "carsTypeTitle": "Тип",
+  "carsConfirmDocuments": "Подтверждающие документы",
+  "carsAddDocument": "Добавить",
+  "carsSubmit": "Добавить",
+  "carsPickBrand": "Выбрать марку автомобиля",
+  "carsPickModel": "Выбрать модель {brand}",
+  "@carsPickModel": {
+    "placeholders": {
+      "brand": {
+        "type": "String"
+      }
+    }
+  },
+  "carsSearchBrand": "Марка автомобиля",
+  "carsSearchModel": "Модель автомобиля",
+  "carsOtherModel": "Другая модель",
+  "carsOtherModelName": "Название модели",
+  "carsOtherModelDone": "Готово",
+  "carsNothingFound": "Ничего не найдено",
+  "carsPhotoSheetTitle": "Загрузка фотографии",
+  "carsPhotoCamera": "Камера",
+  "carsPhotoGallery": "Галерея",
+  "carsStsTitle": "СТС",
+  "carsStsHint": "Загрузите фото документа автомобиля",
+  "carsStsTake": "Сделать фото",
+  "carsEdit": "Редактировать",
+  "carsReplace": "Заменить",
+  "carsEditTitle": "Редактирование ТС",
+  "carsSave": "Сохранить",
+  "driverBookingsCancelTrip": "Отменить поездку",
+  "driverBookingsCancelTitle": "Отменить поездку?",
+  "driverBookingsCancelWithPassengers": "Отмена повлияет на аккаунт: отмен за 30 дней — {count}",
+  "@driverBookingsCancelWithPassengers": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "driverBookingsCancelPlain": "Пассажиров нет, отмена не повлияет на аккаунт.",
+  "driverBookingsCancelBack": "Назад"
+}

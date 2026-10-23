@@ -1,0 +1,24 @@
+{
+  "name": "the-way",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Путь (The Way) — монорепо: API (NestJS) и Dart-клиент из OpenAPI; мобильный клиент — apps/mobile (Flutter)",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "apps/api",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=api",
+    "build": "npm run build --workspace=api",
+    "test": "npm test --workspace=api",
+    "db:migrate": "npm run db:migrate --workspace=api",
+    "db:seed": "npm run db:seed --workspace=api",
+    "db:seed:demo": "npm run db:seed:demo --workspace=api",
+    "openapi:emit": "npm run openapi:emit --workspace=api",
+    "codegen:dart": "cd packages/api-client-dart && dart run swagger_parser && dart run build_runner build --delete-conflicting-outputs"
+  }
+}

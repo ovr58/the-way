@@ -1,0 +1,49 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "API «Путь» — модульный монолит на NestJS",
+  "license": "UNLICENSED",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "test": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js",
+    "db:migrate": "ts-node --project tsconfig.json src/db/cli.ts",
+    "db:generate": "drizzle-kit generate",
+    "openapi:emit": "ts-node --project tsconfig.json src/openapi.ts",
+    "db:seed": "ts-node --project tsconfig.json seed/index.ts",
+    "db:seed:demo": "ts-node --project tsconfig.json seed/demo.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^12.0.1",
+    "@nestjs/core": "^12.0.1",
+    "@nestjs/platform-express": "^12.1.2",
+    "@nestjs/swagger": "^12.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "drizzle-orm": "^0.45.2",
+    "express": "^5.3.0",
+    "pg": "^8.23.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^12.0.0",
+    "@nestjs/schematics": "^12.0.1",
+    "@nestjs/testing": "^12.0.1",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^22.20.2",
+    "@types/pg": "^8.23.1",
+    "@types/supertest": "^6.0.3",
+    "drizzle-kit": "^0.31.10",
+    "jest": "^30.5.1",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

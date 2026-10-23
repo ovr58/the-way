@@ -1,0 +1,4133 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/auth/request-code": {
+      "post": {
+        "operationId": "requestCode",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestCodeBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RequestCodeResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/auth/verify": {
+      "post": {
+        "operationId": "verify",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerifyResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "operationId": "logout",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/health": {
+      "get": {
+        "operationId": "health",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/me": {
+      "get": {
+        "operationId": "getMe",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Me"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      },
+      "patch": {
+        "operationId": "patchMe",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchMeBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Me"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/me/complaints": {
+      "get": {
+        "operationId": "myComplaints",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complaint"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/users/{id}/public": {
+      "get": {
+        "operationId": "getPublicUser",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserBrief"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/cities": {
+      "get": {
+        "operationId": "listCities",
+        "parameters": [
+          {
+            "name": "q",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/City"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "cities"
+        ]
+      }
+    },
+    "/files": {
+      "post": {
+        "operationId": "uploadFile",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/FileUploadBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileRef"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "files"
+        ]
+      }
+    },
+    "/files/{id}": {
+      "get": {
+        "operationId": "getFile",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/webp": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "files"
+        ]
+      }
+    },
+    "/cars": {
+      "get": {
+        "operationId": "listCars",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cars"
+        ]
+      },
+      "post": {
+        "operationId": "createCar",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cars"
+        ]
+      }
+    },
+    "/cars/{id}": {
+      "patch": {
+        "operationId": "updateCar",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarPatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cars"
+        ]
+      },
+      "delete": {
+        "operationId": "deleteCar",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cars"
+        ]
+      }
+    },
+    "/cars/{id}/documents": {
+      "post": {
+        "operationId": "addCarDocument",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarDocumentInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cars"
+        ]
+      }
+    },
+    "/trips": {
+      "get": {
+        "operationId": "searchTrips",
+        "parameters": [
+          {
+            "name": "fromCityId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "toCityId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "lat",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "lng",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "near",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "kind",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/TripKind"
+            }
+          },
+          {
+            "name": "vehicleKind",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/VehicleKind"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TripCard"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      },
+      "post": {
+        "operationId": "createTrip",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TripInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/mine": {
+      "get": {
+        "operationId": "myTrips",
+        "parameters": [
+          {
+            "name": "status",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ListStatus"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DriverTripCard"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/limits": {
+      "get": {
+        "operationId": "tripLimits",
+        "parameters": [
+          {
+            "name": "carId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "example": "2026-10-22",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripLimits"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/{id}": {
+      "get": {
+        "operationId": "getTrip",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      },
+      "patch": {
+        "operationId": "updateTrip",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TripPatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/{id}/reverse": {
+      "post": {
+        "operationId": "reverseTrip",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReverseInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/{id}/seats": {
+      "post": {
+        "operationId": "setTripSeats",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SeatsInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/{id}/close-intake": {
+      "post": {
+        "operationId": "closeTripIntake",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/{id}/cancel-preview": {
+      "get": {
+        "operationId": "tripCancelPreview",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CancelPreview"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/{id}/cancel": {
+      "post": {
+        "operationId": "cancelTrip",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CancelResult"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/route-templates": {
+      "get": {
+        "operationId": "listRouteTemplates",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RouteTemplate"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      },
+      "post": {
+        "operationId": "createRouteTemplate",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RouteTemplateInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RouteTemplate"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/route-templates/{id}": {
+      "delete": {
+        "operationId": "deleteRouteTemplate",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "trips"
+        ]
+      }
+    },
+    "/trips/{id}/quote": {
+      "get": {
+        "operationId": "quoteBooking",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fromIdx",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "toIdx",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "seats",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "parcelSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ParcelSize"
+            }
+          },
+          {
+            "name": "extras",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "child_seat,pets",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Quote"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/trips/{id}/bookings": {
+      "post": {
+        "operationId": "createBooking",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      },
+      "get": {
+        "operationId": "tripBookings",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/bookings/mine": {
+      "get": {
+        "operationId": "myBookings",
+        "parameters": [
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ListStatus"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/bookings/{id}": {
+      "get": {
+        "operationId": "getBooking",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/bookings/{id}/confirm": {
+      "post": {
+        "operationId": "confirmBooking",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/bookings/{id}/reject": {
+      "post": {
+        "operationId": "rejectBooking",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/bookings/{id}/pay": {
+      "post": {
+        "operationId": "payBooking",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/bookings/{id}/cancel-preview": {
+      "get": {
+        "operationId": "bookingCancelPreview",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CancelPreview"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/bookings/{id}/cancel": {
+      "post": {
+        "operationId": "cancelBooking",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CancelResult"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/updates": {
+      "get": {
+        "operationId": "listUpdates",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Update"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/updates/{bookingId}/seen": {
+      "post": {
+        "operationId": "markUpdateSeen",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "bookings"
+        ]
+      }
+    },
+    "/orders": {
+      "post": {
+        "operationId": "createOrder",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "orders"
+        ]
+      },
+      "get": {
+        "operationId": "searchOrders",
+        "parameters": [
+          {
+            "name": "fromCityId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "toCityId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "lat",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "lng",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "near",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "kind",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/TripKind"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrderCard"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "orders"
+        ]
+      }
+    },
+    "/orders/mine": {
+      "get": {
+        "operationId": "myOrders",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrderCard"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "orders"
+        ]
+      }
+    },
+    "/orders/{id}": {
+      "get": {
+        "operationId": "getOrder",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "orders"
+        ]
+      }
+    },
+    "/orders/{id}/cancel": {
+      "post": {
+        "operationId": "cancelOrder",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "orders"
+        ]
+      }
+    },
+    "/orders/{id}/respond": {
+      "post": {
+        "operationId": "respondToOrder",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderResponseInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "orders"
+        ]
+      }
+    },
+    "/users/{id}/reviews": {
+      "get": {
+        "operationId": "listUserReviews",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Review"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "reviews"
+        ]
+      }
+    },
+    "/geo/suggest": {
+      "get": {
+        "operationId": "suggestAddress",
+        "parameters": [
+          {
+            "name": "q",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cityId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GeoSuggestion"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "geo"
+        ]
+      }
+    },
+    "/client-logs": {
+      "post": {
+        "operationId": "writeClientLog",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientLogBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "logs"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "The Way API",
+    "description": "Контракт порождается из кода (`npm run openapi:emit`).",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "opaque",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "RequestCodeBody": {
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string",
+            "example": "+375 25 777 44 20"
+          }
+        },
+        "required": [
+          "phone"
+        ]
+      },
+      "RequestCodeResult": {
+        "type": "object",
+        "properties": {
+          "resendAfterSec": {
+            "type": "integer",
+            "example": 60
+          }
+        },
+        "required": [
+          "resendAfterSec"
+        ]
+      },
+      "VerifyBody": {
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string",
+            "example": "+375 25 777 44 20"
+          },
+          "code": {
+            "type": "string",
+            "example": "111111"
+          }
+        },
+        "required": [
+          "phone",
+          "code"
+        ]
+      },
+      "CityRef": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      },
+      "UserMode": {
+        "type": "string",
+        "enum": [
+          "passenger",
+          "driver"
+        ]
+      },
+      "Rating": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number"
+          },
+          "count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value",
+          "count"
+        ]
+      },
+      "Me": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "nullable": true,
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CityRef"
+              }
+            ]
+          },
+          "mode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UserMode"
+              }
+            ]
+          },
+          "rating": {
+            "$ref": "#/components/schemas/Rating"
+          },
+          "tripsCount": {
+            "type": "integer"
+          },
+          "blockedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "cancellationsLast30": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "phone",
+          "mode",
+          "rating",
+          "tripsCount",
+          "cancellationsLast30"
+        ]
+      },
+      "VerifyResult": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          },
+          "isNew": {
+            "type": "boolean"
+          },
+          "me": {
+            "$ref": "#/components/schemas/Me"
+          }
+        },
+        "required": [
+          "token",
+          "isNew",
+          "me"
+        ]
+      },
+      "HealthResult": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok"
+        ]
+      },
+      "PatchMeBody": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoFileId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "cityId": {
+            "type": "integer",
+            "nullable": true
+          },
+          "mode": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UserMode"
+              }
+            ]
+          }
+        }
+      },
+      "ComplaintStatus": {
+        "type": "string",
+        "enum": [
+          "open",
+          "closed"
+        ]
+      },
+      "Complaint": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ComplaintStatus"
+              }
+            ]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "reason",
+          "status",
+          "createdAt"
+        ]
+      },
+      "UserBrief": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "rating": {
+            "$ref": "#/components/schemas/Rating"
+          },
+          "tripsCount": {
+            "type": "integer"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "rating",
+          "tripsCount"
+        ]
+      },
+      "City": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "region",
+          "lat",
+          "lng"
+        ]
+      },
+      "FileUploadBody": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary"
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "FileRef": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "url"
+        ]
+      },
+      "VehicleKind": {
+        "type": "string",
+        "enum": [
+          "car",
+          "bus"
+        ]
+      },
+      "CarStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "verified",
+          "rejected"
+        ]
+      },
+      "CarDocumentKind": {
+        "type": "string",
+        "enum": [
+          "sts"
+        ]
+      },
+      "CarDocument": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CarDocumentKind"
+              }
+            ]
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "url"
+        ]
+      },
+      "Car": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VehicleKind"
+              }
+            ]
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "plate": {
+            "type": "string"
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CarStatus"
+              }
+            ]
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarDocument"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "brand",
+          "model",
+          "kind",
+          "seats",
+          "plate",
+          "status",
+          "documents"
+        ]
+      },
+      "CarInput": {
+        "type": "object",
+        "properties": {
+          "brand": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VehicleKind"
+              }
+            ]
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "plate": {
+            "type": "string"
+          },
+          "photoFileId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "required": [
+          "brand",
+          "model",
+          "kind",
+          "seats",
+          "plate"
+        ]
+      },
+      "CarPatch": {
+        "type": "object",
+        "properties": {
+          "brand": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VehicleKind"
+              }
+            ]
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "plate": {
+            "type": "string"
+          },
+          "photoFileId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        }
+      },
+      "CarDocumentInput": {
+        "type": "object",
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CarDocumentKind"
+              }
+            ]
+          }
+        },
+        "required": [
+          "fileId",
+          "kind"
+        ]
+      },
+      "TripKind": {
+        "type": "string",
+        "enum": [
+          "ride",
+          "parcel"
+        ]
+      },
+      "Stop": {
+        "type": "object",
+        "properties": {
+          "idx": {
+            "type": "integer"
+          },
+          "cityId": {
+            "type": "integer"
+          },
+          "cityName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "shortAddress": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number",
+            "nullable": true
+          },
+          "lng": {
+            "type": "number",
+            "nullable": true
+          }
+        },
+        "required": [
+          "idx",
+          "cityId",
+          "cityName",
+          "address",
+          "shortAddress"
+        ]
+      },
+      "TripBadge": {
+        "type": "string",
+        "enum": [
+          "top",
+          "nearest"
+        ]
+      },
+      "ServiceKind": {
+        "type": "string",
+        "enum": [
+          "child_seat",
+          "pets",
+          "luggage"
+        ]
+      },
+      "CarriedParcelSize": {
+        "type": "string",
+        "enum": [
+          "S",
+          "M",
+          "L"
+        ]
+      },
+      "TripStatus": {
+        "type": "string",
+        "enum": [
+          "active",
+          "intake_closed",
+          "completed",
+          "cancelled"
+        ]
+      },
+      "TripCard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "from": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "stopsCount": {
+            "type": "integer"
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seatsFree": {
+            "type": "integer"
+          },
+          "seatsTotal": {
+            "type": "integer"
+          },
+          "parcelSeatsFree": {
+            "type": "integer"
+          },
+          "parcelSeatsTotal": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "integer"
+          },
+          "distanceKm": {
+            "type": "number",
+            "nullable": true
+          },
+          "badge": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripBadge"
+              }
+            ]
+          },
+          "driver": {
+            "$ref": "#/components/schemas/UserBrief"
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceKind"
+            }
+          },
+          "parcelAllowed": {
+            "type": "boolean"
+          },
+          "parcelSizes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarriedParcelSize"
+            }
+          },
+          "duplicates": {
+            "type": "integer"
+          },
+          "registrationOpen": {
+            "type": "boolean"
+          },
+          "bookable": {
+            "type": "boolean"
+          },
+          "parcelBookable": {
+            "type": "boolean"
+          },
+          "effectiveStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripStatus"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "number",
+          "kind",
+          "from",
+          "to",
+          "stopsCount",
+          "departsAt",
+          "arrivesAt",
+          "seatsFree",
+          "seatsTotal",
+          "parcelSeatsFree",
+          "parcelSeatsTotal",
+          "price",
+          "driver",
+          "extras",
+          "parcelAllowed",
+          "parcelSizes",
+          "duplicates",
+          "registrationOpen",
+          "bookable",
+          "parcelBookable",
+          "effectiveStatus"
+        ]
+      },
+      "ListStatus": {
+        "type": "string",
+        "enum": [
+          "active",
+          "completed"
+        ]
+      },
+      "Responder": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "DriverTripCard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "from": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "stopsCount": {
+            "type": "integer"
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seatsFree": {
+            "type": "integer"
+          },
+          "seatsTotal": {
+            "type": "integer"
+          },
+          "parcelSeatsFree": {
+            "type": "integer"
+          },
+          "parcelSeatsTotal": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "integer"
+          },
+          "distanceKm": {
+            "type": "number",
+            "nullable": true
+          },
+          "badge": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripBadge"
+              }
+            ]
+          },
+          "driver": {
+            "$ref": "#/components/schemas/UserBrief"
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceKind"
+            }
+          },
+          "parcelAllowed": {
+            "type": "boolean"
+          },
+          "parcelSizes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarriedParcelSize"
+            }
+          },
+          "duplicates": {
+            "type": "integer"
+          },
+          "registrationOpen": {
+            "type": "boolean"
+          },
+          "bookable": {
+            "type": "boolean"
+          },
+          "parcelBookable": {
+            "type": "boolean"
+          },
+          "effectiveStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripStatus"
+              }
+            ]
+          },
+          "requested": {
+            "type": "integer"
+          },
+          "awaitingPayment": {
+            "type": "integer"
+          },
+          "paid": {
+            "type": "integer"
+          },
+          "parcels": {
+            "type": "integer"
+          },
+          "responders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Responder"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "number",
+          "kind",
+          "from",
+          "to",
+          "stopsCount",
+          "departsAt",
+          "arrivesAt",
+          "seatsFree",
+          "seatsTotal",
+          "parcelSeatsFree",
+          "parcelSeatsTotal",
+          "price",
+          "driver",
+          "extras",
+          "parcelAllowed",
+          "parcelSizes",
+          "duplicates",
+          "registrationOpen",
+          "bookable",
+          "parcelBookable",
+          "effectiveStatus",
+          "requested",
+          "awaitingPayment",
+          "paid",
+          "parcels",
+          "responders"
+        ]
+      },
+      "TripLimits": {
+        "type": "object",
+        "properties": {
+          "forwardUsed": {
+            "type": "integer"
+          },
+          "reverseUsed": {
+            "type": "integer"
+          },
+          "weekUsed": {
+            "type": "integer"
+          },
+          "weekLimit": {
+            "type": "integer",
+            "example": 10
+          },
+          "maxDaysAhead": {
+            "type": "integer",
+            "example": 3
+          }
+        },
+        "required": [
+          "forwardUsed",
+          "reverseUsed",
+          "weekUsed",
+          "weekLimit",
+          "maxDaysAhead"
+        ]
+      },
+      "Price": {
+        "type": "object",
+        "properties": {
+          "fromIdx": {
+            "type": "integer"
+          },
+          "toIdx": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "fromIdx",
+          "toIdx",
+          "price"
+        ]
+      },
+      "ExtraKind": {
+        "type": "string",
+        "enum": [
+          "child_seat",
+          "pets",
+          "luggage",
+          "parcel_s",
+          "parcel_m",
+          "parcel_l"
+        ]
+      },
+      "Extra": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExtraKind"
+              }
+            ]
+          },
+          "price": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "kind",
+          "price"
+        ]
+      },
+      "BookingMode": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "instant"
+        ]
+      },
+      "BookingStatus": {
+        "type": "string",
+        "enum": [
+          "requested",
+          "awaiting_payment",
+          "paid",
+          "rejected",
+          "cancelled"
+        ]
+      },
+      "ParcelSize": {
+        "type": "string",
+        "enum": [
+          "none",
+          "S",
+          "M",
+          "L"
+        ]
+      },
+      "Booking": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BookingStatus"
+              }
+            ]
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "fromIdx": {
+            "type": "integer"
+          },
+          "toIdx": {
+            "type": "integer"
+          },
+          "from": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "segmentPrice": {
+            "type": "integer"
+          },
+          "parcelSize": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ParcelSize"
+              }
+            ]
+          },
+          "parcelOnly": {
+            "type": "boolean"
+          },
+          "parcelComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Extra"
+            }
+          },
+          "priceTotal": {
+            "type": "integer"
+          },
+          "segmentKm": {
+            "type": "number",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "paidAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "trip": {
+            "$ref": "#/components/schemas/TripCard"
+          },
+          "passenger": {
+            "$ref": "#/components/schemas/UserBrief"
+          },
+          "orderId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "orderNumber": {
+            "type": "integer",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "number",
+          "status",
+          "seats",
+          "fromIdx",
+          "toIdx",
+          "from",
+          "to",
+          "segmentPrice",
+          "parcelSize",
+          "parcelOnly",
+          "extras",
+          "priceTotal",
+          "createdAt",
+          "trip",
+          "passenger"
+        ]
+      },
+      "TripDetails": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "from": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "stopsCount": {
+            "type": "integer"
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seatsFree": {
+            "type": "integer"
+          },
+          "seatsTotal": {
+            "type": "integer"
+          },
+          "parcelSeatsFree": {
+            "type": "integer"
+          },
+          "parcelSeatsTotal": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "integer"
+          },
+          "distanceKm": {
+            "type": "number",
+            "nullable": true
+          },
+          "badge": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripBadge"
+              }
+            ]
+          },
+          "driver": {
+            "$ref": "#/components/schemas/UserBrief"
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceKind"
+            }
+          },
+          "parcelAllowed": {
+            "type": "boolean"
+          },
+          "parcelSizes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarriedParcelSize"
+            }
+          },
+          "duplicates": {
+            "type": "integer"
+          },
+          "registrationOpen": {
+            "type": "boolean"
+          },
+          "bookable": {
+            "type": "boolean"
+          },
+          "parcelBookable": {
+            "type": "boolean"
+          },
+          "effectiveStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripStatus"
+              }
+            ]
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Stop"
+            }
+          },
+          "prices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Price"
+            }
+          },
+          "priceBoardingMin": {
+            "type": "integer"
+          },
+          "extrasPriced": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Extra"
+            }
+          },
+          "parcelOnlyAllowed": {
+            "type": "boolean"
+          },
+          "bookingMode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BookingMode"
+              }
+            ]
+          },
+          "car": {
+            "$ref": "#/components/schemas/Car"
+          },
+          "isMine": {
+            "type": "boolean"
+          },
+          "editLocked": {
+            "type": "boolean"
+          },
+          "myBooking": {
+            "nullable": true,
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Booking"
+              }
+            ]
+          },
+          "reverseOf": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "paidTotal": {
+            "type": "integer",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "number",
+          "kind",
+          "from",
+          "to",
+          "stopsCount",
+          "departsAt",
+          "arrivesAt",
+          "seatsFree",
+          "seatsTotal",
+          "parcelSeatsFree",
+          "parcelSeatsTotal",
+          "price",
+          "driver",
+          "extras",
+          "parcelAllowed",
+          "parcelSizes",
+          "duplicates",
+          "registrationOpen",
+          "bookable",
+          "parcelBookable",
+          "effectiveStatus",
+          "stops",
+          "prices",
+          "priceBoardingMin",
+          "extrasPriced",
+          "parcelOnlyAllowed",
+          "bookingMode",
+          "car",
+          "isMine",
+          "editLocked"
+        ]
+      },
+      "Place": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "region"
+        ]
+      },
+      "StopInput": {
+        "type": "object",
+        "properties": {
+          "cityId": {
+            "type": "integer",
+            "nullable": true
+          },
+          "place": {
+            "nullable": true,
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Place"
+              }
+            ]
+          },
+          "address": {
+            "type": "string"
+          },
+          "shortAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "lat": {
+            "type": "number",
+            "nullable": true
+          },
+          "lng": {
+            "type": "number",
+            "nullable": true
+          }
+        },
+        "required": [
+          "address"
+        ]
+      },
+      "TripInput": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "vehicleKind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VehicleKind"
+              }
+            ]
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StopInput"
+            }
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seatsTotal": {
+            "type": "integer"
+          },
+          "priceFull": {
+            "type": "integer"
+          },
+          "prices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Price"
+            }
+          },
+          "priceBoardingMin": {
+            "type": "integer"
+          },
+          "carId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Extra"
+            }
+          },
+          "parcelOnlyAllowed": {
+            "type": "boolean"
+          },
+          "parcelSeatsTotal": {
+            "type": "integer"
+          },
+          "bookingMode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BookingMode"
+              }
+            ]
+          },
+          "orderId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "required": [
+          "kind",
+          "vehicleKind",
+          "stops",
+          "departsAt",
+          "arrivesAt",
+          "seatsTotal",
+          "priceFull",
+          "prices",
+          "priceBoardingMin",
+          "carId",
+          "extras",
+          "parcelOnlyAllowed",
+          "parcelSeatsTotal",
+          "bookingMode"
+        ]
+      },
+      "TripPatch": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "vehicleKind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VehicleKind"
+              }
+            ]
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StopInput"
+            }
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seatsTotal": {
+            "type": "integer"
+          },
+          "priceFull": {
+            "type": "integer"
+          },
+          "prices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Price"
+            }
+          },
+          "priceBoardingMin": {
+            "type": "integer"
+          },
+          "carId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Extra"
+            }
+          },
+          "parcelOnlyAllowed": {
+            "type": "boolean"
+          },
+          "parcelSeatsTotal": {
+            "type": "integer"
+          },
+          "bookingMode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BookingMode"
+              }
+            ]
+          }
+        }
+      },
+      "ReverseInput": {
+        "type": "object",
+        "properties": {
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "departsAt",
+          "arrivesAt"
+        ]
+      },
+      "SeatsInput": {
+        "type": "object",
+        "properties": {
+          "seatsTotal": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "seatsTotal"
+        ]
+      },
+      "CancelPreview": {
+        "type": "object",
+        "properties": {
+          "cancellationsLast30": {
+            "type": "integer"
+          },
+          "willBlock": {
+            "type": "boolean"
+          },
+          "refundAmount": {
+            "type": "integer",
+            "nullable": true
+          },
+          "counts": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "required": [
+          "cancellationsLast30",
+          "willBlock"
+        ]
+      },
+      "CancelledStatus": {
+        "type": "string",
+        "enum": [
+          "cancelled"
+        ]
+      },
+      "Refund": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "integer"
+          },
+          "days": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "amount",
+          "days"
+        ]
+      },
+      "CancelResult": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CancelledStatus"
+              }
+            ]
+          },
+          "cancellationsLast30": {
+            "type": "integer"
+          },
+          "blockedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "refund": {
+            "nullable": true,
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Refund"
+              }
+            ]
+          }
+        },
+        "required": [
+          "status",
+          "cancellationsLast30"
+        ]
+      },
+      "RouteTemplate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Stop"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "stops"
+        ]
+      },
+      "RouteTemplateInput": {
+        "type": "object",
+        "properties": {
+          "stops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StopInput"
+            }
+          }
+        },
+        "required": [
+          "stops"
+        ]
+      },
+      "Quote": {
+        "type": "object",
+        "properties": {
+          "segmentPrice": {
+            "type": "integer"
+          },
+          "priceTotal": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "segmentPrice",
+          "priceTotal"
+        ]
+      },
+      "BookingInput": {
+        "type": "object",
+        "properties": {
+          "fromIdx": {
+            "type": "integer"
+          },
+          "toIdx": {
+            "type": "integer"
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "parcelSize": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ParcelSize"
+              }
+            ]
+          },
+          "parcelOnly": {
+            "type": "boolean"
+          },
+          "parcelComment": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 250
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceKind"
+            }
+          }
+        },
+        "required": [
+          "fromIdx",
+          "toIdx",
+          "seats",
+          "parcelSize",
+          "parcelOnly",
+          "extras"
+        ]
+      },
+      "UpdateKind": {
+        "type": "string",
+        "enum": [
+          "new_request",
+          "passenger_paid",
+          "driver_accepted",
+          "driver_rejected"
+        ]
+      },
+      "Update": {
+        "type": "object",
+        "properties": {
+          "bookingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "tripId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UpdateKind"
+              }
+            ]
+          },
+          "at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "bookingId",
+          "tripId",
+          "kind",
+          "at"
+        ]
+      },
+      "OrderInput": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StopInput"
+            }
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "parcelSize": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ParcelSize"
+              }
+            ]
+          },
+          "parcelComment": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 250
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceKind"
+            }
+          }
+        },
+        "required": [
+          "kind",
+          "stops",
+          "departsAt",
+          "arrivesAt",
+          "seats",
+          "parcelSize",
+          "extras"
+        ]
+      },
+      "OrderStatus": {
+        "type": "string",
+        "enum": [
+          "open",
+          "matched",
+          "cancelled",
+          "expired"
+        ]
+      },
+      "OrderTripMatch": {
+        "type": "object",
+        "properties": {
+          "trip": {
+            "$ref": "#/components/schemas/TripCard"
+          },
+          "fromIdx": {
+            "type": "integer"
+          },
+          "toIdx": {
+            "type": "integer"
+          },
+          "priceTotal": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "trip",
+          "fromIdx",
+          "toIdx",
+          "priceTotal"
+        ]
+      },
+      "OrderDetails": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "from": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "stopsCount": {
+            "type": "integer"
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "parcelSize": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ParcelSize"
+              }
+            ]
+          },
+          "parcelOnly": {
+            "type": "boolean"
+          },
+          "parcelComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceKind"
+            }
+          },
+          "passenger": {
+            "$ref": "#/components/schemas/UserBrief"
+          },
+          "distanceKm": {
+            "type": "number",
+            "nullable": true
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OrderStatus"
+              }
+            ]
+          },
+          "bookingId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Stop"
+            }
+          },
+          "isMine": {
+            "type": "boolean"
+          },
+          "matchingTrips": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderTripMatch"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "number",
+          "kind",
+          "from",
+          "to",
+          "stopsCount",
+          "departsAt",
+          "arrivesAt",
+          "seats",
+          "parcelSize",
+          "parcelOnly",
+          "extras",
+          "passenger",
+          "status",
+          "createdAt",
+          "stops",
+          "isMine",
+          "matchingTrips"
+        ]
+      },
+      "OrderCard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "kind": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TripKind"
+              }
+            ]
+          },
+          "from": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Stop"
+          },
+          "stopsCount": {
+            "type": "integer"
+          },
+          "departsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrivesAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seats": {
+            "type": "integer"
+          },
+          "parcelSize": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ParcelSize"
+              }
+            ]
+          },
+          "parcelOnly": {
+            "type": "boolean"
+          },
+          "parcelComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceKind"
+            }
+          },
+          "passenger": {
+            "$ref": "#/components/schemas/UserBrief"
+          },
+          "distanceKm": {
+            "type": "number",
+            "nullable": true
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OrderStatus"
+              }
+            ]
+          },
+          "bookingId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "number",
+          "kind",
+          "from",
+          "to",
+          "stopsCount",
+          "departsAt",
+          "arrivesAt",
+          "seats",
+          "parcelSize",
+          "parcelOnly",
+          "extras",
+          "passenger",
+          "status",
+          "createdAt"
+        ]
+      },
+      "OrderResponseInput": {
+        "type": "object",
+        "properties": {
+          "tripId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "tripId"
+        ]
+      },
+      "Review": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "authorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "rating": {
+            "type": "integer"
+          },
+          "body": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "rating",
+          "createdAt"
+        ]
+      },
+      "GeoSuggestion": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "shortLabel": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          },
+          "place": {
+            "$ref": "#/components/schemas/Place"
+          }
+        },
+        "required": [
+          "label",
+          "shortLabel",
+          "lat",
+          "lng",
+          "place"
+        ]
+      },
+      "ClientLogLevel": {
+        "type": "string",
+        "enum": [
+          "error",
+          "warn",
+          "info"
+        ]
+      },
+      "ClientLogBody": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ClientLogLevel"
+              }
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "screen": {
+            "type": "string",
+            "nullable": true
+          },
+          "traceId": {
+            "type": "string",
+            "nullable": true
+          },
+          "appVersion": {
+            "type": "string"
+          },
+          "device": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "level",
+          "message",
+          "appVersion",
+          "device"
+        ]
+      },
+      "ErrorCode": {
+        "type": "string",
+        "enum": [
+          "validation",
+          "invalid_code",
+          "unauthorized",
+          "forbidden",
+          "not_found",
+          "limit_reached",
+          "too_far_ahead",
+          "invalid_time_step",
+          "edit_locked",
+          "seats_below_taken",
+          "no_seats",
+          "trip_unavailable",
+          "booking_exists",
+          "car_invalid",
+          "file_too_large",
+          "file_type",
+          "blocked",
+          "account_blocked",
+          "invalid_transition",
+          "order_unavailable",
+          "order_mismatch",
+          "car_plate_taken",
+          "car_seats_out_of_range",
+          "internal"
+        ]
+      },
+      "ErrorBody": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ErrorCode"
+              }
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "blockedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      }
+    }
+  }
+}

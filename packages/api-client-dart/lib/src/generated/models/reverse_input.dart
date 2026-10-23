@@ -1,0 +1,22 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, unused_import, invalid_annotation_target, unnecessary_import
+
+import 'package:json_annotation/json_annotation.dart';
+
+part 'reverse_input.g.dart';
+
+@JsonSerializable()
+class ReverseInput {
+  const ReverseInput({
+    required this.departsAt,
+    required this.arrivesAt,
+  });
+  
+  factory ReverseInput.fromJson(Map<String, Object?> json) => _$ReverseInputFromJson(json);
+  
+  final DateTime departsAt;
+  final DateTime arrivesAt;
+
+  Map<String, Object?> toJson() => _$ReverseInputToJson(this);
+}

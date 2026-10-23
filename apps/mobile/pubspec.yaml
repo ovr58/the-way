@@ -1,0 +1,47 @@
+name: the_way
+description: "Путь — поездки между городами: клиент Android."
+publish_to: 'none'
+version: 1.0.1+2
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  api_client:
+    path: ../../packages/api-client-dart
+  dio: ^5.11.1
+  flutter_secure_storage: ^11.2.0
+  image_picker: ^1.2.4
+  geolocator: ^14.1.2
+  flutter_svg: ^2.3.0
+  intl: ^0.20.3
+  package_info_plus: ^10.2.2
+  device_info_plus: ^13.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/icons/
+    - assets/data/
+    - assets/images/
+  fonts:
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Gilroy-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Gilroy-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/Gilroy-Bold.ttf
+          weight: 700

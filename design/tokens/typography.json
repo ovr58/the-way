@@ -1,0 +1,136 @@
+{
+  "titles": {
+    "title-3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 700,
+        "fontSize": 20
+      }
+    },
+    "footnote": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 600,
+        "fontSize": 13
+      }
+    },
+    "title-2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 700,
+        "fontSize": 24
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 600,
+        "fontSize": 11
+      }
+    },
+    "headline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 700,
+        "fontSize": 17
+      }
+    },
+    "large-title": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 700,
+        "fontSize": 34
+      }
+    },
+    "subheadline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 600,
+        "fontSize": 15
+      }
+    },
+    "title-1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 700,
+        "fontSize": 28
+      }
+    }
+  },
+  "body": {
+    "body-2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 400,
+        "fontSize": 15
+      }
+    },
+    "body-1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 400,
+        "fontSize": 17
+      }
+    },
+    "footnote": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 400,
+        "fontSize": 13
+      }
+    },
+    "caption-1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 400,
+        "fontSize": 12
+      }
+    }
+  },
+  "buttons": {
+    "button-3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 500,
+        "fontSize": 12
+      }
+    },
+    "button-1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 600,
+        "fontSize": 15
+      }
+    },
+    "button-2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 600,
+        "fontSize": 13
+      }
+    },
+    "button-4": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Gilroy",
+        "fontWeight": 500,
+        "fontSize": 11
+      }
+    }
+  }
+}

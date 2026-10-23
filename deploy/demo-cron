@@ -1,0 +1,1 @@
+0 0 * * * set -a; . /srv/theway/app.env; set +a; export PATH=/srv/theway/node/bin:/usr/bin:/bin; cd /srv/theway/app/apps/api && /srv/theway/node/bin/npm run db:seed:demo >> /srv/theway/logs/demo-cron.log 2>&1

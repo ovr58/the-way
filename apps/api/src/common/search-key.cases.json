@@ -1,0 +1,18 @@
+[
+  ["Ярославль", "yaroslavl"],
+  ["Yaroslavl", "yaroslavl"],
+  ["Jaroslavl", "yaroslavl"],
+  ["yar", "yar"],
+  ["Переславль-Залесский", "pereslavl-zalesskiy"],
+  ["ГАЗ", "gaz"],
+  ["УАЗ", "uaz"],
+  ["ПАЗ", "paz"],
+  ["МОСКВА", "moskva"],
+  ["Щёлково", "shchelkovo"],
+  ["Хабаровск", "khabarovsk"],
+  ["Объячево", "obyachevo"],
+  ["Цивильск", "tsivilsk"],
+  ["Южа", "yuzha"],
+  ["Alexandrov", "aleksandrov"],
+  ["Эртиль", "ertil"]
+]

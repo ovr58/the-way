@@ -1,0 +1,8 @@
+node_modules/
+build/
+.dart_tool/
+.env
+apps/api/data/
+apps/mobile/lib/l10n/app_localizations*.dart
+/release/
+dist/

@@ -1,0 +1,221 @@
+{
+  "text": {
+    "primary": {
+      "$type": "color",
+      "$value": "#0c0c0c"
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "#0c0c0c",
+      "$extensions": {
+        "opacity": 0.5
+      }
+    },
+    "tertiary": {
+      "$type": "color",
+      "$value": "#96979c"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#61636b"
+    },
+    "on-accent": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "black": {
+      "$type": "color",
+      "$value": "#000000"
+    },
+    "strong": {
+      "$type": "color",
+      "$value": "#070c13"
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "#cacbce"
+    },
+    "danger": {
+      "$type": "color",
+      "$value": "#ff383c"
+    }
+  },
+  "bg": {
+    "screen": {
+      "$type": "color",
+      "$value": "#f1f2f3"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "surface-alt": {
+      "$type": "color",
+      "$value": "#f7f7f8"
+    },
+    "button-secondary": {
+      "$type": "color",
+      "$value": "#fcfcfe"
+    },
+    "control": {
+      "$type": "color",
+      "$value": "#f3f3f3"
+    },
+    "grabber": {
+      "$type": "color",
+      "$value": "#cacbce"
+    }
+  },
+  "border": {
+    "default": {
+      "$type": "color",
+      "$value": "#e4e5e6"
+    },
+    "strong": {
+      "$type": "color",
+      "$value": "#070c13"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#c8c8c8"
+    },
+    "neutral": {
+      "$type": "color",
+      "$value": "#979797"
+    }
+  },
+  "accent": {
+    "primary": {
+      "$type": "color",
+      "$value": "#1eb74d"
+    },
+    "primary-tint": {
+      "$type": "color",
+      "$value": "#1eb74d",
+      "$extensions": {
+        "opacity": 0.12
+      }
+    },
+    "warning": {
+      "$type": "color",
+      "$value": "#dbb109"
+    },
+    "success": {
+      "$type": "color",
+      "$value": "#7eeb42"
+    },
+    "success-tint": {
+      "$type": "color",
+      "$value": "#7eeb42",
+      "$extensions": {
+        "opacity": 0.12
+      }
+    }
+  },
+  "status": {
+    "error": {
+      "$type": "color",
+      "$value": "#eb4245"
+    },
+    "error-tint": {
+      "$type": "color",
+      "$value": "#eb4245",
+      "$extensions": {
+        "opacity": 0.12
+      }
+    },
+    "badge": {
+      "$type": "color",
+      "$value": "#ff453a"
+    }
+  },
+  "overlay": {
+    "scrim": {
+      "$type": "color",
+      "$value": "#0c0c0c",
+      "$extensions": {
+        "opacity": 0.4
+      }
+    }
+  },
+  "shadow": {
+    "soft": {
+      "$type": "color",
+      "$value": "#0c0c0c",
+      "$extensions": {
+        "opacity": 0.2
+      }
+    }
+  },
+  "keyboard": {
+    "key": {
+      "$type": "color",
+      "$value": "#b0b1b5"
+    },
+    "key-alt": {
+      "$type": "color",
+      "$value": "#7c7d83"
+    },
+    "bg": {
+      "$type": "color",
+      "$value": "#ebf0f7",
+      "$extensions": {
+        "opacity": 0.5
+      }
+    },
+    "shadow": {
+      "$type": "color",
+      "$value": "#000000",
+      "$extensions": {
+        "opacity": 0.13
+      }
+    },
+    "highlight": {
+      "$type": "color",
+      "$value": "#ffffff",
+      "$extensions": {
+        "opacity": 0.34
+      }
+    }
+  },
+  "ios": {
+    "label": {
+      "$type": "color",
+      "$value": "#3c3c43",
+      "$extensions": {
+        "opacity": 0.8
+      }
+    },
+    "label-secondary": {
+      "$type": "color",
+      "$value": "#3c3c43",
+      "$extensions": {
+        "opacity": 0.6
+      }
+    }
+  },
+  "list-kit": {
+    "text-primary": {
+      "$type": "color",
+      "$value": "#141515"
+    },
+    "text-secondary": {
+      "$type": "color",
+      "$value": "#000000",
+      "$extensions": {
+        "opacity": 0.6
+      }
+    },
+    "text-disabled": {
+      "$type": "color",
+      "$value": "#000000",
+      "$extensions": {
+        "opacity": 0.2
+      }
+    },
+    "divider": {
+      "$type": "color",
+      "$value": "#cac4d0"
+    }
+  }
+}
